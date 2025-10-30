@@ -5,4 +5,3 @@ This repository hosts the front-end foundation for a comprehensive web platform 
 - You can visit the live site here: https://ong-platform.vercel.app/
 
 
-<img width="1566" height="885" alt="image" src="https://github.com/user-attachments/assets/708ad34b-bbba-4508-b043-1cff64e7ba7f" />
