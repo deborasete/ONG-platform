@@ -71,7 +71,7 @@ input:invalid:not(:placeholder-shown) {
 }
 
 li {
-    margin-left: 36px;
+    margin-left: var(--space-md);
 }
 
 .form-buttons {

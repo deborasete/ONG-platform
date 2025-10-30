@@ -3,7 +3,7 @@ main section {
 }
 
 #who-we-are h2, #our-values h2 {
-    margin-bottom: var(--space-x);
+    margin-bottom: var(--space-md);
 }
 
 #who-we-are .col-md-6:first-child { 
@@ -49,9 +49,9 @@ main section {
 }
 
 h2 {
-    margin-left: 36px;
+    margin-left: var(--space-lg);
 }
 
 li {
-    margin-left: 36px;
+    margin-left: var(--space-md);
 }

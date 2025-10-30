@@ -1,34 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
-    const header = document.querySelector('header');
+    const nav = document.querySelector('nav ul');
     const dropdowns = document.querySelectorAll('.dropdown');
 
     menuToggle.addEventListener('click', () => {
-        header.classList.toggle('menu-open');
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        document.body.classList.toggle('menu-open');
     });
 
     dropdowns.forEach(dropdown => {
-        const link = dropdown.querySelector('a');
-        link.addEventListener('click', e => {
+        const toggleLink = dropdown.querySelector('a');
+        toggleLink.addEventListener('click', e => {
             e.preventDefault();
-            dropdown.classList.toggle('active');
+            const expanded = dropdown.getAttribute('aria-expanded') === 'true';
+            dropdown.setAttribute('aria-expanded', !expanded);
         });
     });
 
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', e => {
-            const isDropdownLink = link.parentElement.classList.contains('dropdown');
-            if (window.innerWidth < 768 && !isDropdownLink) {
-                header.classList.remove('menu-open');
-            }
-        });
-    });
+    const openModalBtn = document.querySelectorAll('[data-open-modal]');
+    const modal = document.querySelector('.modal');
+    const closeModalBtn = document.querySelector('.modal .close');
 
-    document.addEventListener('click', e => {
-        dropdowns.forEach(dropdown => {
-            if (!dropdown.contains(e.target)) {
-                dropdown.classList.remove('active');
-            }
-        });
-    });
+    openModalBtn.forEach(btn => btn.addEventListener('click', () => modal?.classList.add('active')));
+    closeModalBtn?.addEventListener('click', () => modal?.classList.remove('active'));
+    modal?.addEventListener('click', e => e.target === modal && modal.classList.remove('active'));
 });
