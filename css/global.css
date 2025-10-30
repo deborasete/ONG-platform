@@ -129,9 +129,18 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-.menu-open nav ul {
+.menu-open nav > ul {
     display: flex;
 }
+
+nav ul .dropdown-menu {
+    display: none;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+
 
 .menu-toggle {
     display: block;
