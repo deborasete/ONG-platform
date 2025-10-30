@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | Plataforma Voluntariado ONG</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/projects.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="container">
+                <h1>ONG Mãos Unidas</h1>
+                <button class="menu-toggle" id="menu-toggle" aria-expanded="false"
+                    aria-controls="main-navigation">☰</button>
+                
+                <nav id="main-navigation">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li class="dropdown">
+                            <a href="projects.html">Projetos Sociais</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#education">Educação</a></li>
+                                <li><a href="#food">Alimentação</a></li>
+                                <li><a href="#inclusion">Inclusão Digital</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="register.html">Cadastro de Voluntários</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <section id="projects-section">
+                <h2>Projetos Sociais em Andamento</h2>
+
+                <div class="projects-container">
+                    <article class="project-card">
+                        <div class="card-image">
+                            <img src="./img/classroom.jpg"
+                                alt="Crianças estudando em uma sala de aula de projeto social.">
+                        </div>
+                        <div class="card-content">
+                            <div>
+                                <span class="tag tag-education">Educação</span>
+                                <span class="tag tag-inclusion">Inclusão</span>
+                            </div>
+                            <h3>Projeto Semente do Amanhã (Educação)</h3>
+                            <p>Foco em reforço escolar para crianças e adolescentes, garantindo o acesso à tecnologia e
+                                a aulas de idiomas. Nosso objetivo é reduzir a evasão escolar na comunidade.</p>
+                            <a href="register.html" class="button button-primary">Quero Ajudar!</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image">
+                            <img src="./img/kitchen.jpg" alt="Voluntários servindo comida.">
+                        </div>
+                        <div class="card-content">
+                            <div>
+                                <span class="tag tag-food">Alimentação</span>
+                            </div>
+                            <h3>Projeto Cozinha Solidária (Alimentação)</h3>
+                            <p>Distribuição semanal de marmitas para famílias carentes e população em situação de rua,
+                                combatendo a insegurança alimentar em nossa região.</p>
+                            <a href="register.html" class="button button-primary">Quero Ajudar!</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image">
+                            <img src="./img/digital-classroom.jpg" alt="Pessoa utilizando tablet para cadastro.">
+                        </div>
+                        <div class="card-content">
+                            <div>
+                                <span class="tag tag-inclusion">Inclusão</span>
+                                <span class="tag tag-education">Digital</span>
+                            </div>
+                            <h3>Projeto Apoio Digital (Inclusão)</h3>
+                            <p>Aulas de informática básica e orientação para uso de serviços digitais essenciais para a
+                                inclusão de adultos e idosos, promovendo confiança e facilidade no uso de tecnologias do dia a dia.</p>
+                            <a href="register.html" class="button button-primary">Quero Ajudar!</a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="volunteering" class="row">
+                <div class="col-12 col-md-6">
+                    <h2>Como Se Tornar um Voluntário</h2>
+                    <p>Seja parte da mudança!</p>
+                    <p>Seu tempo e talento são o nosso maior recurso.</p>
+                    <ol>
+                        <li>Preencha o formulário completo em nossa página de <a href="register.html">Cadastro de
+                                Voluntários</a>.</li>
+                        <li>Aguarde o contato de nossa equipe para uma entrevista inicial.</li>
+                        <li>Participe de um treinamento de orientação e comece a atuar em um de nossos projetos!</li>
+                    </ol>
+                </div>
+
+                <div id="donation" class="col-12 col-md-6">
+                    <h2>Apoie Nossa Causa (Doações)</h2>
+                    <p>Sua contribuição financeira é vital para manter a infraestrutura e a compra de insumos básicos.</p>
+                    <p><strong>Formas de Doação:</strong></p>
+                    <ul>
+                        <li><strong>Pix:</strong> (CNPJ da ONG) 00.000.000/0001-00</li>
+                        <li><strong>Transferência Bancária:</strong> Banco X, Agência YYYY, Conta ZZZZZ-Z.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div>
+                    <h3>Fale Conosco!</h3>
+                    <p><strong>Endereço:</strong> Rua da Cidadania, 123 - Bairro Esperança - Cidade: São Paulo/SP</p>
+                </div>
+                <div>
+                    <p><strong>Telefone:</strong> <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+                    <p><strong>Email:</strong> <a
+                            href="mailto:contato@ongmaosunidas.org.br">contato@ongmaosunidas.org.br</a></p>
+                </div>
+                <p class="copyright">&copy; 2025 ONG Mãos Unidas. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

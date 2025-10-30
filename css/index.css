@@ -1,0 +1,57 @@
+main section {
+    padding: var(--space-md) 0;
+}
+
+#who-we-are h2, #our-values h2 {
+    margin-bottom: var(--space-x);
+}
+
+#who-we-are .col-md-6:first-child { 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+    #who-we-are .col-md-6:first-child {
+        padding-right: var(--space-lg);
+    }
+    #who-we-are .col-md-6:last-child {
+        margin-top: var(--space-md); 
+    }
+}
+
+#our-values ul {
+    margin-bottom: var(--space-md);
+    list-style: disc; 
+}
+
+#who-we-are h3 {
+    margin-bottom: var(--space-lg);
+}
+
+#who-we-are p, #our-values ul li {
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+#who-we-are img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--space-md);
+}
+
+#volunteer-cta {
+    padding-top: 0; 
+    padding-bottom: var(--space-md);
+}
+
+h2 {
+    margin-left: 36px;
+}
+
+li {
+    margin-left: 36px;
+}

@@ -4,46 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início | Plataforma Voluntariado ONG</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    <header>
-        <h1>ONG Mãos Unidas pela Inclusão Social</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos Sociais</a></li>
-                <li><a href="cadastro.html">Cadastro de Voluntários</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="page-wrapper">
+        <header>
+            <div class="container">
+                <h1>ONG Mãos Unidas</h1>
+                <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-navigation">☰</button>
+                <nav id="main-navigation">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li class="dropdown">
+                            <a href="projects.html">Projetos Sociais</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="projects.html#education">Educação</a></li>
+                                <li><a href="projects.html#food">Alimentação</a></li>
+                                <li><a href="projects.html#inclusion">Inclusão Digital</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="register.html">Cadastro de Voluntários</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    <main>
-        <section id="quem-somos">
-            <h2>Quem Somos e Nossa Missão</h2>
-            <img src="./img/volunteers.jpg" alt="Voluntários com as mãos juntas, simbolizando união." width="600" height="400">
-            <article>
-                <h3>Impacto no Terceiro Setor</h3>
-                <p>Somos uma organização sem fins lucrativos dedicada a promover a inclusão social e o desenvolvimento comunitário. Nossa missão é ser uma ponte entre a solidariedade e as necessidades das famílias em situação de vulnerabilidade no Brasil.</p>
-                <p>Com mais de 5 anos de atuação, fazemos parte dos mais de 820 mil organizações que movem a economia social do país, transformando vidas através da educação e apoio mútuo.</p>
-            </article>
-        </section>
+        <main class="container">
+    <section id="who-we-are">
+        <h2>Quem Somos e Nossa Missão</h2> 
+        
+        <div class="row">
+            
+            <div class="col-12 col-md-6"> 
+                <img src="./img/volunteers.jpg" alt="Voluntários com as mãos juntas, simbolizando união." width="600" height="400">
+            </div>
+            
+            <div class="col-12 col-md-6">
+                <article>
+                    <h3>Impacto no Terceiro Setor</h3>
+                    <p>Somos uma organização sem fins lucrativos dedicada a promover a inclusão social e o desenvolvimento comunitário. Nossa missão é ser uma ponte entre a solidariedade e as necessidades das famílias em situação de vulnerabilidade no Brasil.</p>
+                    <p>Com mais de 5 anos de atuação, fazemos parte dos mais de 820 mil organizações que movem a economia social do país, transformando vidas através da educação e apoio mútuo.</p>
+                </article>
+            </div>
+            
+        </div>
+    </section>
 
-        <section id="nossos-valores">
-            <h2>Valores Fundamentais</h2>
-            <ul>
-                <li>Transparência e ética.</li>
-                <li>Solidariedade e empatia.</li>
-                <li>Foco na inclusão social e empoderamento.</li>
-            </ul>
-        </section>
-    </main>
+    <section id="our-values">
+        <h2>Valores Fundamentais</h2>
+        
+        <div class="row">
+            
+            <div class="col-12 col-md-6"> 
+                <ul>
+                    <li>Transparência e ética.</li>
+                    <li>Solidariedade e empatia.</li>
+                    <li>Foco na inclusão social e empoderamento.</li>
+                </ul>
+            </div>
+            
+            <div class="col-12 col-md-6" style="text-align: center;"> 
+                <a href="register.html" class="button button-primary">Quero Ser Voluntário!</a>
+            </div>
+        </div>
+    </section>
+</main>
 
-    <footer>
-        <h3>Fale Conosco!</h3>
-        <p><strong>Endereço:</strong> Rua da Cidadania, 123 - Bairro Esperança - Cidade: São Paulo/SP</p>
-        <p><strong>Telefone:</strong> <a href="tel:+5511999999999">(11) 99999-9999</a></p>
-        <p><strong>Email:</strong> <a href="mailto:contato@ongmaosunidas.org.br">contato@ongmaosunidas.org.br</a></p>
-        <p>&copy; 2025 ONG Mãos Unidas. Todos os direitos reservados.</p>
-    </footer>
+        <footer>
+            <div class="container">
+                <div>
+                    <h3>Fale Conosco!</h3>
+                    <p><strong>Endereço:</strong> Rua da Cidadania, 123 - Bairro Esperança - Cidade: São Paulo/SP</p>
+                </div>
+                <div>
+                    <p><strong>Telefone:</strong> <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:contato@ongmaosunidas.org.br">contato@ongmaosunidas.org.br</a></p>
+                </div>
+                <p class="copyright">&copy; 2025 ONG Mãos Unidas. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>
