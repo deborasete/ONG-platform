@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +8,23 @@
     <link rel="stylesheet" href="./css/projects.css">
 </head>
 <body>
+    <!-- Link de acessibilidade para pular direto ao conteúdo -->
+    <a href="#projects-section" class="skip-link">Pular para o conteúdo principal</a>
+
     <div class="page-wrapper">
-        <header>
+        <header role="banner" aria-label="Cabeçalho principal com navegação da ONG Mãos Unidas">
             <div class="container">
                 <h1>ONG Mãos Unidas</h1>
+
                 <button class="menu-toggle" id="menu-toggle" aria-expanded="false"
-                    aria-controls="main-navigation">☰</button>
+                    aria-controls="main-navigation" aria-label="Abrir ou fechar menu de navegação">☰</button>
                 
-                <nav id="main-navigation">
+                <nav id="main-navigation" role="navigation" aria-label="Menu principal">
                     <ul>
                         <li><a href="index.html">Início</a></li>
-                        <li class="dropdown">
-                            <a href="projects.html">Projetos Sociais</a>
-                            <ul class="dropdown-menu">
+                        <li class="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a href="projects.html" aria-label="Ver todos os projetos sociais">Projetos Sociais</a>
+                            <ul class="dropdown-menu" aria-label="Submenu de Projetos Sociais">
                                 <li><a href="#education">Educação</a></li>
                                 <li><a href="#food">Alimentação</a></li>
                                 <li><a href="#inclusion">Inclusão Digital</a></li>
@@ -32,77 +36,83 @@
             </div>
         </header>
 
-        <main class="container">
-            <section id="projects-section">
-                <h2>Projetos Sociais em Andamento</h2>
+        <main class="container" role="main" aria-label="Página com projetos sociais da ONG Mãos Unidas">
+            <section id="projects-section" aria-labelledby="titulo-projetos">
+                <h2 id="titulo-projetos">Projetos Sociais em Andamento</h2>
 
                 <div class="projects-container">
-                    <article class="project-card">
+                    <article class="project-card" id="education" aria-labelledby="titulo-educacao">
                         <div class="card-image">
                             <img src="./img/classroom.jpg"
-                                alt="Crianças estudando em uma sala de aula de projeto social.">
+                                alt="Crianças em um projeto educacional da ONG Mãos Unidas participando de aula com materiais escolares e tablets.">
                         </div>
                         <div class="card-content">
                             <div>
                                 <span class="tag tag-education">Educação</span>
                                 <span class="tag tag-inclusion">Inclusão</span>
                             </div>
-                            <h3>Projeto Semente do Amanhã (Educação)</h3>
-                            <p>Foco em reforço escolar para crianças e adolescentes, garantindo o acesso à tecnologia e
-                                a aulas de idiomas. Nosso objetivo é reduzir a evasão escolar na comunidade.</p>
-                            <a href="register.html" class="button button-primary">Quero Ajudar!</a>
+                            <h3 id="titulo-educacao">Projeto Semente do Amanhã (Educação)</h3>
+                            <p>Foco em reforço escolar para crianças e adolescentes, garantindo o acesso à tecnologia e a aulas de idiomas. Nosso objetivo é reduzir a evasão escolar na comunidade.</p>
+                            <a href="register.html" class="button button-primary" aria-label="Quero ajudar no projeto Semente do Amanhã">Quero Ajudar!</a>
                         </div>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card" id="food" aria-labelledby="titulo-alimentacao">
                         <div class="card-image">
-                            <img src="./img/kitchen.jpg" alt="Voluntários servindo comida.">
+                            <img src="./img/kitchen.jpg"
+                                 alt="Voluntários da ONG Mãos Unidas servindo refeições para famílias em vulnerabilidade social em uma cozinha comunitária.">
                         </div>
                         <div class="card-content">
                             <div>
                                 <span class="tag tag-food">Alimentação</span>
                             </div>
-                            <h3>Projeto Cozinha Solidária (Alimentação)</h3>
-                            <p>Distribuição semanal de marmitas para famílias carentes e população em situação de rua,
-                                combatendo a insegurança alimentar em nossa região.</p>
-                            <a href="register.html" class="button button-primary">Quero Ajudar!</a>
+                            <h3 id="titulo-alimentacao">Projeto Cozinha Solidária (Alimentação)</h3>
+                            <p>Distribuição semanal de marmitas para famílias carentes e população em situação de rua, combatendo a insegurança alimentar em nossa região.</p>
+                            <a href="register.html" class="button button-primary" aria-label="Quero ajudar no projeto Cozinha Solidária">Quero Ajudar!</a>
                         </div>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card" id="inclusion" aria-labelledby="titulo-inclusao">
                         <div class="card-image">
-                            <img src="./img/digital-classroom.jpg" alt="Pessoa utilizando tablet para cadastro.">
+                            <img src="./img/digital-classroom.jpg"
+                                 alt="Instrutor da ONG Mãos Unidas auxiliando idosos a utilizarem tablets em uma oficina de inclusão digital.">
                         </div>
                         <div class="card-content">
                             <div>
                                 <span class="tag tag-inclusion">Inclusão</span>
                                 <span class="tag tag-education">Digital</span>
                             </div>
-                            <h3>Projeto Apoio Digital (Inclusão)</h3>
-                            <p>Aulas de informática básica e orientação para uso de serviços digitais essenciais para a
-                                inclusão de adultos e idosos, promovendo confiança e facilidade no uso de tecnologias do dia a dia.</p>
-                            <a href="register.html" class="button button-primary">Quero Ajudar!</a>
+                            <h3 id="titulo-inclusao">Projeto Apoio Digital (Inclusão)</h3>
+                            <p>Aulas de informática básica e orientação para uso de serviços digitais essenciais para a inclusão de adultos e idosos, promovendo confiança e facilidade no uso de tecnologias do dia a dia.</p>
+                            <a href="register.html" class="button button-primary" aria-label="Quero ajudar no projeto Apoio Digital">Quero Ajudar!</a>
                         </div>
                     </article>
-
                 </div>
             </section>
 
-            <section id="volunteering" class="row">
+            <section id="media-section" aria-labelledby="titulo-midia">
+                <h3 id="titulo-midia">Efeito Dos Nossos Projetos em Ação</h3>
+                <div class="media-content">
+                    <audio controls aria-label="Depoimento de um voluntário sobre sua experiência na ONG Mãos Unidas">
+                        <source src="./img/example-audio.mp3" type="audio/mpeg">
+                        Seu navegador não suporta o áudio.
+                    </audio>
+                </div>
+            </section>
+
+            <section id="volunteering" class="row" aria-labelledby="titulo-voluntariado">
                 <div class="col-12 col-md-6">
-                    <h2>Como Se Tornar um Voluntário</h2>
-                    <p>Seja parte da mudança!</p>
-                    <p>Seu tempo e talento são o nosso maior recurso.</p>
+                    <h2 id="titulo-voluntariado">Como Se Tornar um Voluntário</h2>
+                    <p>Seja parte da mudança! Seu tempo e talento são o nosso maior recurso.</p>
                     <ol>
-                        <li>Preencha o formulário completo em nossa página de <a href="register.html">Cadastro de
-                                Voluntários</a>.</li>
+                        <li>Preencha o formulário completo em nossa página de <a href="register.html">Cadastro de Voluntários</a>.</li>
                         <li>Aguarde o contato de nossa equipe para uma entrevista inicial.</li>
                         <li>Participe de um treinamento de orientação e comece a atuar em um de nossos projetos!</li>
                     </ol>
                 </div>
 
-                <div id="donation" class="col-12 col-md-6">
-                    <h2>Apoie Nossa Causa (Doações)</h2>
+                <div id="donation" class="col-12 col-md-6" aria-labelledby="titulo-doacao">
+                    <h2 id="titulo-doacao">Apoie Nossa Causa (Doações)</h2>
                     <p>Sua contribuição financeira é vital para manter a infraestrutura e a compra de insumos básicos.</p>
                     <p><strong>Formas de Doação:</strong></p>
                     <ul>
@@ -113,21 +123,21 @@
             </section>
         </main>
 
-        <footer>
+        <footer role="contentinfo" aria-label="Rodapé com informações de contato e direitos autorais da ONG Mãos Unidas">
             <div class="container">
                 <div>
                     <h3>Fale Conosco!</h3>
-                    <p><strong>Endereço:</strong> Rua da Cidadania, 123 - Bairro Esperança - Cidade: São Paulo/SP</p>
+                    <p><strong>Endereço:</strong> Rua da Cidadania, 123 - Bairro Esperança - São Paulo/SP</p>
                 </div>
                 <div>
-                    <p><strong>Telefone:</strong> <a href="tel:+5511999999999">(11) 99999-9999</a></p>
-                    <p><strong>Email:</strong> <a
-                            href="mailto:contato@ongmaosunidas.org.br">contato@ongmaosunidas.org.br</a></p>
+                    <p><strong>Telefone:</strong> <a href="tel:+5511999999999" aria-label="Ligar para a ONG Mãos Unidas">(11) 99999-9999</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:contato@ongmaosunidas.org.br" aria-label="Enviar e-mail para a ONG Mãos Unidas">contato@ongmaosunidas.org.br</a></p>
                 </div>
                 <p class="copyright">&copy; 2025 ONG Mãos Unidas. Todos os direitos reservados.</p>
             </div>
         </footer>
     </div>
+
     <script src="./js/script.js"></script>
 </body>
 </html>
