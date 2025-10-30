@@ -73,3 +73,11 @@ input:invalid:not(:placeholder-shown) {
 li {
     margin-left: 36px;
 }
+
+.form-buttons {
+    display: flex;
+    flex-direction: column; 
+    gap: 12px;              
+    margin-top: 16px;       
+    align-items: flex-start;
+}

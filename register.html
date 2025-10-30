@@ -11,14 +11,25 @@
     <div class="page-wrapper">
         <header>
             <div class="container">
-                <h1>ONG Mãos Unidas</h1>
-                <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-navigation">☰</button>
-                <nav id="main-navigation">
+                <h1 id="site-title">ONG Mãos Unidas</h1>
+
+                <!-- Botão do menu acessível -->
+                <button 
+                    class="menu-toggle" 
+                    id="menu-toggle" 
+                    aria-expanded="false" 
+                    aria-controls="main-navigation"
+                    aria-label="Abrir menu principal">
+                    ☰
+                </button>
+
+                <!-- Navegação principal -->
+                <nav id="main-navigation" role="navigation" aria-labelledby="site-title">
                     <ul>
-                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html" aria-current="page">Início</a></li>
                         <li class="dropdown">
-                            <a href="projects.html">Projetos Sociais</a>
-                            <ul class="dropdown-menu">
+                            <a href="projects.html" aria-haspopup="true" aria-expanded="false">Projetos Sociais</a>
+                            <ul class="dropdown-menu" aria-label="Submenu de projetos sociais">
                                 <li><a href="projects.html#education">Educação</a></li>
                                 <li><a href="projects.html#food">Alimentação</a></li>
                                 <li><a href="projects.html#inclusion">Inclusão Digital</a></li>
@@ -31,12 +42,19 @@
         </header>
 
         <main class="container">
-            <section id="registration-form">
-                <h2>Formulário de Inscrição para Voluntariado</h2>
-                <img src="./img/digital-form.jpg" alt="Pessoa preenchendo um formulário digital." width="600" height="400">
-                
-                <form action="#" method="POST">
-                    
+            <section id="registration-form" aria-labelledby="form-title">
+                <h2 id="form-title">Formulário de Inscrição para Voluntariado</h2>
+                <img 
+                    src="./img/digital-form.jpg" 
+                    alt="Pessoa preenchendo um formulário digital em um notebook, representando o processo de inscrição para voluntariado."
+                    width="600" height="400">
+
+                <form action="#" method="POST" aria-describedby="form-description">
+                    <p id="form-description">
+                        Preencha o formulário abaixo com suas informações pessoais, de contato e endereço
+                        para participar das ações voluntárias da ONG Mãos Unidas.
+                    </p>
+
                     <fieldset>
                         <legend>Dados Pessoais</legend>
                         
@@ -107,16 +125,19 @@
                                 <option value="SP">São Paulo</option>
                                 <option value="RJ">Rio de Janeiro</option>
                                 <option value="MG">Minas Gerais</option>
-                                </select>
+                            </select>
                         </div>
                     </fieldset>
                     
-                    <button type="submit" class="button button-primary">Enviar Cadastro</button>
+                    <div class="form-buttons">
+                        <button type="submit" class="button button-primary">Enviar Cadastro</button>
+                        <button type="reset" class="button button-secondary" aria-label="Limpar todos os campos do formulário">Limpar</button>
+                    </div>
                 </form>
             </section>
         </main>
 
-        <footer>
+        <footer role="contentinfo">
             <div class="container">
                 <div>
                     <h3>Fale Conosco!</h3>
